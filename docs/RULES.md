@@ -7,15 +7,15 @@ This game is a strategic grid-based Tic-Tac-Toe variant played on a configurable
 
 ## 1. Board Setup
 - **Board Dimensions**: Default is a **16x16 grid** (easily configurable in code).
-- **Center Region**: The middle **9x9 square** is highlighted on the board UI.
-  - For a 16x16 grid, this spans rows 3 to 11 and columns 3 to 11 (0-indexed).
+- **Center Region**: The middle **3x3 square** is highlighted on the board UI (configurable via `centerSize`).
+  - For a 16x16 grid with a 3x3 center, this spans rows 6 to 8 and columns 6 to 8 (0-indexed).
 
 ---
 
 ## 2. Placement Rules
 - **Player 1 (`X`) goes first**, followed by **Player 2 (`O`)**.
 - **First Move Constraint**:
-  - Both Player 1 and Player 2 **must** place their initial piece inside the central 9x9 square.
+  - Both Player 1 and Player 2 **must** place their initial piece inside the central 3x3 square.
 - **Subsequent Move Constraint**:
   - After their first move, each player must place new pieces within a distance of $\le 2$ squares (Chebyshev distance, including horizontal, vertical, and diagonal directions) of any of their own existing pieces on the board.
   - This means there can be **at most 1 empty square** between the new piece and an existing piece belonging to the active player.
