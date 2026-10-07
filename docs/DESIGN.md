@@ -14,5 +14,5 @@
  1. Having a defensive player (play 2) and an attacker (player 1), the defencive player has to block the attacker to the point the attacker is totally blocked. Each player has similar limits in terms of only being able to place pieces within a range of another already placed piece. I rules this out though because I thought it would be almost impossible for the defender to win - and other variants, such as restricting where the attacker could place their pieces just shifted th ebalance too much the other way.
 
 ### Impossible to draw?
-If you consider this pattern
-
+By increasing the size of the board, the number of permutations is increased, I believe making it impossible to draw. 
+It seems though that it is rather skewed towards the first player always winning.
