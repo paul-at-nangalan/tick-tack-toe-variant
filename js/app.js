@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const game = new TicTacToeVariant(16, 9);
+  const game = new TicTacToeVariant(16, 3);
 
   // DOM Elements
   const boardEl = document.getElementById('board');

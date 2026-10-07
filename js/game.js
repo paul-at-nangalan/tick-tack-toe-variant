@@ -2,7 +2,7 @@
  * TicTacToeVariant - Core Game Logic
  */
 class TicTacToeVariant {
-  constructor(boardSize = 16, centerSize = 9) {
+  constructor(boardSize = 16, centerSize = 3) {
     this.boardSize = boardSize;
     this.centerSize = centerSize;
 
@@ -37,7 +37,7 @@ class TicTacToeVariant {
     this.gameState = 'PLAYING'; // 'PLAYING', 'REMOVAL', 'GAME_OVER'
     this.removalsPending = 0;
     this.winner = null;
-    this.statusMessage = "Player X's turn to place initial piece in the center 9x9 area.";
+    this.statusMessage = `Player X's turn to place initial piece in the center ${this.centerSize}x${this.centerSize} area.`;
   }
 
   isInCenter(r, c) {
@@ -223,7 +223,7 @@ class TicTacToeVariant {
     this.currentPlayer = this.getOpponent(this.currentPlayer);
     const player = this.currentPlayer;
     if (!this.players[player].firstMoveMade) {
-      this.statusMessage = `Player ${player}'s turn to place initial piece in the center 9x9 area.`;
+      this.statusMessage = `Player ${player}'s turn to place initial piece in the center ${this.centerSize}x${this.centerSize} area.`;
     } else {
       this.statusMessage = `Player ${player}'s turn to place a piece.`;
     }
